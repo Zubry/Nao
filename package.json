@@ -1,0 +1,18 @@
+{
+  "name": "nao-demo",
+  "version": "1.0.0",
+  "description": "A demo for the NAO robot for a CIS4930 project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "build": "browserify index.js -o bundle.js"
+  },
+  "author": "James Steele",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^13.1.0",
+    "immutable": "^3.8.1",
+    "qi": "node_modules/qi/index.js"
+  }
+}
