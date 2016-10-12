@@ -37,7 +37,11 @@ function move(session) {
 session
   .socket()
   .on('connect', function() {
-    bayesian.loop((text) => speak(session, text));
+    const button = document
+      .querySelector('button[name=speak]');
+
+    button.removeAttribute('disabled');
+    button.addEventListener('click', () => bayesian.loop((text) => speak(session, text)));
   })
   .on('disconnect', function() {
     console.log('Disconnected');

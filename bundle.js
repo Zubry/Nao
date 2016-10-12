@@ -67,8 +67,7 @@ function select_topic(topics) {
 function loop(topics, speak) {
   [ next_topic, ...rest ] = select_topic(topics);
   [ question, ...remaining_questions ] = next_topic.get('topic');
-
-  console.log(speak);
+  
   speak(question)
     .done(() => {
       const answer = prompt(question);
@@ -146,7 +145,11 @@ function move(session) {
 session
   .socket()
   .on('connect', function() {
-    bayesian.loop((text) => speak(session, text));
+    const button = document
+      .querySelector('button[name=speak]');
+
+    button.removeAttribute('disabled');
+    button.addEventListener('click', () => bayesian.loop((text) => speak(session, text)));
   })
   .on('disconnect', function() {
     console.log('Disconnected');
