@@ -55,11 +55,16 @@ function select_topic(topics) {
   return [max].concat(rest);
 }
 
-function loop(topics, io) {
+function loop(topics, speak) {
   [ next_topic, ...rest ] = select_topic(topics);
   [ question, ...remaining_questions ] = next_topic.get('topic');
 
-  io.question(question, (answer) => {
+  console.log(speak);
+  speak(question);
+
+  setTimeout(() => {
+    const answer = prompt(question);
+
     const topic = add_vote(next_topic, parseInt(answer, 10))
       .update('topic', (topic) => topic.shift().push(topic.first()));
     const model = List([topic])
@@ -70,8 +75,8 @@ function loop(topics, io) {
     const t = model
       .map((topic) => update_scores(topic, avg, 1))
 
-    loop(t, io);
-  });
+    loop(t, speak);
+  }, 3000);
 }
 
 function format(topics) {
@@ -89,9 +94,6 @@ const avg = average_rating(model);
 const t = model
   .map((topic) => update_scores(topic, avg, 1))
 
-const io = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-loop(t, io);
+module.exports = {
+  loop: (f) => loop(t, f)
+};

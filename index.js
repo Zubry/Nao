@@ -1,4 +1,5 @@
 const session = new QiSession('gator.local');
+const bayesian = require('./bayesian.js');
 
 function speak(session, phrase) {
   session
@@ -36,7 +37,7 @@ function move(session) {
 session
   .socket()
   .on('connect', function() {
-    move(session);
+    bayesian.loop((text) => speak(session, text));
   })
   .on('disconnect', function() {
     console.log('Disconnected');
