@@ -69,23 +69,22 @@ function loop(topics, speak) {
   [ question, ...remaining_questions ] = next_topic.get('topic');
 
   console.log(speak);
-  speak(question);
+  speak(question)
+    .done(() => {
+      const answer = prompt(question);
 
-  setTimeout(() => {
-    const answer = prompt(question);
+      const topic = add_vote(next_topic, parseInt(answer, 10))
+        .update('topic', (topic) => topic.shift().push(topic.first()));
+      const model = List([topic])
+        .concat(rest[0]);
 
-    const topic = add_vote(next_topic, parseInt(answer, 10))
-      .update('topic', (topic) => topic.shift().push(topic.first()));
-    const model = List([topic])
-      .concat(rest[0]);
+      const avg = average_rating(model);
 
-    const avg = average_rating(model);
+      const t = model
+        .map((topic) => update_scores(topic, avg, 1))
 
-    const t = model
-      .map((topic) => update_scores(topic, avg, 1))
-
-    loop(t, speak);
-  }, 3000);
+      loop(t, speak);
+    });
 }
 
 function format(topics) {
@@ -112,7 +111,7 @@ const session = new QiSession('gator.local');
 const bayesian = require('./bayesian.js');
 
 function speak(session, phrase) {
-  session
+  return session
     .service('ALTextToSpeech')
     .done((tts) => tts.say(phrase))
     .fail((error) => console.log('Failed to run TTS'));

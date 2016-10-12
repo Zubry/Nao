@@ -2,7 +2,7 @@ const session = new QiSession('gator.local');
 const bayesian = require('./bayesian.js');
 
 function speak(session, phrase) {
-  session
+  return session
     .service('ALTextToSpeech')
     .done((tts) => tts.say(phrase))
     .fail((error) => console.log('Failed to run TTS'));
