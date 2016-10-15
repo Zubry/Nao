@@ -12,8 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "browserify": "^13.1.0",
+    "chart.js": "^2.3.0",
     "express": "^4.14.0",
     "immutable": "^3.8.1",
-    "qi": "node_modules/qi/index.js"
+    "qi": "node_modules/qi/index.js",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1"
   }
 }

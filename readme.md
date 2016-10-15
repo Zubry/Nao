@@ -2,14 +2,6 @@
 
 Make sure you hit the app with an `npm install` in order to get all of the dependencies.
 
-# Using the bayesian estimator
+# Using the applications
 
-Add dialogue to bayesian.json. The format should be pretty apparent.
-
-To run, type `node bayesian.js`.
-
-After each bit of dialogue, enter a score from 1-10 based on how bored you are of the text. 10 is engaged, 1 is disengaged, 5 is average.
-
-# Using the robot
-
-Make sure you have browserify installed globally by running `npm install -g browserify`. Then, run `npm run build` and open index.html in your browser.
+Make sure you have browserify installed by running `npm install -g browserify`, then build the project by running `npm run build`. Then, start the server by running `node server.js`, and open http://localhost:4000/ in your browser. If you use the BCI reader, you'll need to give python sudo permission. Just enter your password in the terminal when you're told. Not happy about that, but that's what Emotiv wants you to do.

@@ -14,7 +14,13 @@
           <h1>Functions</h1>
           <button class="btn btn-primary btn-lg" name="speak" disabled>Speak</button>
           <button class="btn btn-primary btn-lg" name="bayesian" disabled>Bayesian Estimator</button>
+          <button class="btn btn-primary btn-lg" name="chart" disabled>Read BCI values</button>
           <p class="bg-danger hide" id="disconnect-error">Disconnected from the robot</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class=".col-md-6 .col-md-offset-3" style="text-align:center">
+          <canvas id="bci-chart" width="800" height="400" class="hide" style="margin:auto"></canvas>
         </div>
       </div>
     </div>

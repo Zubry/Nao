@@ -1,5 +1,5 @@
-const session = new QiSession('gator.local');
-const bayesian = require('./bayesian.js');
+const chart = require('./chart-bci.js');
+const rp = require('request-promise');
 
 function speak(session, phrase) {
   return session
@@ -33,6 +33,37 @@ function move(session) {
     .done((amp) => amp.moveTo(-0.3, -0.3, -Math.pi/2))
     .fail((err) => console.log(err));
 }
+
+let chartLabel = 0;
+const chartButton = document
+.querySelector('button[name=chart]');
+
+chartButton.removeAttribute('disabled');
+chartButton.addEventListener('click', () => {
+  let chart_element = document.getElementById('bci-chart');
+  chart_element.classList.remove('hide');
+  chart_element.classList.add('show');
+
+  setInterval(() => {
+    rp('http://localhost:4000/read_bci/')
+      .then((bci) => {
+        console.log(bci);
+        chart.data.datasets[0].data.push(bci);
+        chart.data.labels.push(++chartLabel);
+
+        if (chart.data.labels.length > 10) {
+          chart.data.datasets[0].data.shift();
+          chart.data.labels.shift();
+        }
+
+        chart.update();
+      })
+      .catch((err) => console.log(err));
+  }, 5500);
+});
+
+const session = new QiSession('gator.local');
+const bayesian = require('./bayesian.js');
 
 session
   .socket()
