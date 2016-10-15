@@ -50,6 +50,10 @@ session
     speakButton.addEventListener('click', () => speak(session, prompt('What should I say?')));
   })
   .on('disconnect', function() {
+    const err = document.getElementById('disconnect-error');
+    err.classList.remove('hide');
+    err.classList.add('show');
+
     console.log('Disconnected');
   });
 

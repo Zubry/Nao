@@ -58,7 +58,7 @@ function select_topic(topics) {
 function loop(topics, speak) {
   [ next_topic, ...rest ] = select_topic(topics);
   [ question, ...remaining_questions ] = next_topic.get('topic');
-  
+
   speak(question)
     .done(() => {
       const answer = prompt(question);
