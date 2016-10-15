@@ -5,6 +5,7 @@ port = process.env.PORT || 4000;
 const exec = require('child_process').exec;
 
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/static'));
 
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');

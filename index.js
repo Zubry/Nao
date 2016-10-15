@@ -1,4 +1,4 @@
-const chart = require('./chart-bci.js');
+const chart = require('./bci_chart/chart-bci.js');
 const rp = require('request-promise');
 
 function speak(session, phrase) {
@@ -63,7 +63,7 @@ chartButton.addEventListener('click', () => {
 });
 
 const session = new QiSession('gator.local');
-const bayesian = require('./bayesian.js');
+const bayesian = require('./bayesian_estimator/bayesian.js');
 
 session
   .socket()

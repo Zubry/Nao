@@ -1,0 +1,12 @@
+{
+  "name": "qi-messaging",
+  "version": "1.0.0",
+  "description": "Copy of the QI messaging library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "James Steele",
+  "license": "ISC"
+}
