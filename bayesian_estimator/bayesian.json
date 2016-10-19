@@ -1,4 +1,5 @@
 [
+<<<<<<< Updated upstream
   ["One day you finally knew what you had to do, and began, though the voices around you kept shouting their bad advice--", " though the whole house began to tremble and you felt the old tug at your ankles. \"Mend my life!\" each voice cried.", "But you didn't stop. You knew what you had to do, though the wind pried with its stiff fingers at the very foundations, though their melancholy was terrible.", "It was already late enough, and a wild night, and the road full of fallen branches and stones.", "But little by little as you left their voices behind, the stars began to burn through the sheets of clouds, and there was a new voice which you slowly recognized as your own, that kept you company as you strode deeper and deeper into the world, determined to do the only thing you could do-- determined to save the only life you could save."],
   ["JavaScript (\"JS\" for short) is a full-fledged dynamic programming language that, when applied to an HTML document, can provide dynamic interactivity on websites. It was invented by Brendan Eich, co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation.", "You can do pretty much anything with JavaScript. You'll start small with simple features such as carousels, image galleries, fluctuating layouts, and responses to button clicks. Eventually as you get more experienced with the language, you'll be able to create games, animated 2D and 3D graphics, full blown database-driven apps, and more!", "JavaScript itself is fairly compact but very flexible, and developers have written a lot of tools on top of the core JavaScript language, to unlock a huge amount of extra functionality with very little effort. These include:", "Application Programming Interfaces (APIs) built into web browsers, providing various functionality like dynamically creating HTML and setting CSS styles, grabbing and manipulating a video stream from the user's webcam, or generating 3D graphics and audio samples.", "Third-party APIs to allow developers to incorporate functionality in their sites from other properties, such as Twitter or Facebook.", "Third-party frameworks and libraries you can apply to your HTML to allow you to rapidly build up sites and applications."],
   ["Oakland Raiders running back Latavius Murray, who has missed the past two games with a turf-toe injury on his right foot, will practice Wednesday in hopes of returning for Sunday’s game at the Jacksonville Jaguars.",
@@ -12,3 +13,50 @@
   "“It’s one of those things you definitely don’t want to allow to linger on and get worse,” Murray said. “I’m just making sure I’m communicating with the trainers, being honest about everything. I think that’s what’s most important.”"],
   ["I'm artistically brokenhearted. I wanted to be a screen actor. I wanted to change the world through my sensitivity. But it was a very closed system in Italy. There are only like five movies per year. And there aren’t exactly auditions. You must be friends with the director to get a role. So I tried going to Britain. And that almost destroyed me", "I was always cast as a foreigner. Usually I was a Mafioso, but I played all types of foreigners. I’ve been a Spanish waiter, a Turkish waiter, and a French waiter. And they were always making me wear a mustache.", "So I tried for America. I applied for an extraordinary talent visa. It cost me $6,000. The application was the size of a book. I had to submit ten letters of recommendation to prove that I was extraordinary. What a scam that was.", "Nobody cares that I’m extraordinary. None of the television stations will audition people with this visa. Everyone wants to see a green card. I can only work on small productions. But things have gotten a little better.", "I’m getting some minor roles. I’m still playing gangsters. But sometimes I’m the funny gangster. Or the gangster with some sense. My next role is a scientist who turns into a zombie. In the movie, every stranger appears to be a zombie. But nobody is really a zombie. Strangers just seem like zombies. So, hey, there’s a moral message there."]
 ]
+=======
+	["One day you finally knew
+		what you had to do,
+		and began,
+		though the voices around you
+		kept shouting
+		their bad advice--
+		though the whole house
+		began to tremble
+		and you felt the old tug
+		at your ankles.\
+		"Mend my life!\"
+		each voice cried.
+		", "
+		But you didn 't stop.
+		You knew what you had to do,
+		though the wind pried
+		with its stiff fingers
+		at the very foundations,
+		though their melancholy
+		was terrible.
+		", "
+		It was already late
+		enough, and a wild night,
+		and the road full of fallen
+		branches and stones.
+		", "
+		But little by little,
+		as you left their voices behind,
+		the stars began to burn
+		through the sheets of clouds,
+		and there was a new voice
+		which you slowly
+		recognized as your own,
+		that kept you company
+		as you strode deeper and deeper
+		into the world,
+		determined to do
+			the only thing you could do --
+				determined to save
+			the only life you could save.
+		"], ["
+		JavaScript(\"JS\" for short) is a full-fledged dynamic programming language that, when applied to an HTML document, can provide dynamic interactivity on websites. It was invented by Brendan Eich, co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation.", "You can do pretty much anything with JavaScript. You'll start small with simple features such as carousels, image galleries, fluctuating layouts, and responses to button clicks. Eventually as you get more experienced with the language, you'll be able to create games, animated 2D and 3D graphics, full blown database-driven apps, and more!", "JavaScript itself is fairly compact but very flexible, and developers have written a lot of tools on top of the core JavaScript language, to unlock a huge amount of extra functionality with very little effort. These include:", "Application Programming Interfaces (APIs) built into web browsers, providing various functionality like dynamically creating HTML and setting CSS styles, grabbing and manipulating a video stream from the user's webcam, or generating 3D graphics and audio samples.", "Third-party APIs to allow developers to incorporate functionality in their sites from other properties, such as Twitter or Facebook.", "Third-party frameworks and libraries you can apply to your HTML to allow you to rapidly build up sites and applications."],
+		["I'm artistically brokenhearted. I wanted to be a screen actor. I wanted to change the world through my sensitivity. But it was a very closed system in Italy. There are only like five movies per year. And there aren’t exactly auditions. You must be friends with the director to get a role. So I tried going to Britain. And that almost destroyed me", "I was always cast as a foreigner. Usually I was a Mafioso, but I played all types of foreigners. I’ve been a Spanish waiter, a Turkish waiter, and a French waiter. And they were always making me wear a mustache.", "So I tried for America. I applied for an extraordinary talent visa. It cost me $6,000. The application was the size of a book. I had to submit ten letters of recommendation to prove that I was extraordinary. What a scam that was.", "Nobody cares that I’m extraordinary. None of the television stations will audition people with this visa. Everyone wants to see a green card. I can only work on small productions. But things have gotten a little better.", "I’m getting some minor roles. I’m still playing gangsters. But sometimes I’m the funny gangster. Or the gangster with some sense. My next role is a scientist who turns into a zombie. In the movie, every stranger appears to be a zombie. But nobody is really a zombie. Strangers just seem like zombies. So, hey, there’s a moral message there."],
+		["Tracing the history of Mars maps is like taking a visual tour of how our thinking about the red planet has changed. Each new telescope and space mission brought about a leap in understanding that is reflected in the maps that followed.", "These days our knowledge about Earth's second closest neighbor in the solar system grows by the hour, as the Curiosity and Opportunity rovers explore the Martian surface with five active satellites orbiting above them. And on October 19, the fleet grew by at least one with the successful arrival of the ExoMars Trace Gas Orbiter—although it's not yet clear whether the mission's lander made it safely to the surface.", "This month, National Geographic magazine published a beautifully detailed new map of Mars based on the latest imagery and data from these missions. “In many ways Mars is better mapped than Earth, as no features are hidden from study,” says National Geographic’s planetary cartographer Matt Chwastyk.", "Scientists and cartographers had far less to go on before there were so many robots studying Mars on humans’ behalf, but that didn’t stop them from making maps. The maps reflected their evolving ideas about the planet—what it was made of, whether it was habitable, who might be living there. And sometimes it was the maps themselves that shaped people’s view of Mars.", "From our earliest sketches of blobs and shadows, to the suspicion of Martian-made canals, to our fine-tuned understanding of the planet’s gravity, maps of Mars have both informed us and inspired our imaginations."]
+	]
+>>>>>>> Stashed changes
