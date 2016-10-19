@@ -47,7 +47,6 @@ chartButton.addEventListener('click', () => {
   setInterval(() => {
     rp('http://localhost:4000/read_bci/')
       .then((bci) => {
-        console.log(bci);
         chart.data.datasets[0].data.push(bci);
         chart.data.labels.push(++chartLabel);
 
@@ -62,7 +61,7 @@ chartButton.addEventListener('click', () => {
   }, 5500);
 });
 
-const session = new QiSession('gator.local');
+const session = new QiSession('gator.local:80');
 const bayesian = require('./bayesian_estimator/bayesian.js');
 
 session
@@ -75,7 +74,7 @@ session
       .querySelector('button[name=speak]');
 
     bayesianButton.removeAttribute('disabled');
-    bayesianButton.addEventListener('click', () => bayesian.loop((text) => speak(session, text)));
+    bayesianButton.addEventListener('click', () => bayesian.loop((text) => speak(session, text), 'http://localhost:4000/read_bci/'));
 
     speakButton.removeAttribute('disabled');
     speakButton.addEventListener('click', () => speak(session, prompt('What should I say?')));

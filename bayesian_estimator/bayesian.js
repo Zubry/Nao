@@ -1,6 +1,7 @@
 const readline = require('readline');
 const Immutable = require("immutable");
 const { Map, List } = Immutable;
+const rp = require('request-promise');
 
 const topics = Immutable.fromJS(require('./bayesian.json'));
 
@@ -55,14 +56,15 @@ function select_topic(topics) {
   return [max].concat(rest);
 }
 
-function loop(topics, speak) {
+function loop(topics, speak, feedback) {
   [ next_topic, ...rest ] = select_topic(topics);
   [ question, ...remaining_questions ] = next_topic.get('topic');
+  console.log(feedback);
 
-  speak(question)
-    .done(() => {
-      const answer = prompt(question);
-
+  Promise.all([speak(question), rp(feedback)])
+    .then((result) => {
+      console.log(result);
+      const answer = result[1];
       const topic = add_vote(next_topic, parseInt(answer, 10))
         .update('topic', (topic) => topic.shift().push(topic.first()));
       const model = List([topic])
@@ -73,7 +75,9 @@ function loop(topics, speak) {
       const t = model
         .map((topic) => update_scores(topic, avg, 1))
 
-      loop(t, speak);
+      loop(t, speak, feedback);
+    }, (reason) => {
+      console.log(reason);
     });
 }
 
@@ -93,5 +97,5 @@ const t = model
   .map((topic) => update_scores(topic, avg, 1))
 
 module.exports = {
-  loop: (f) => loop(t, f)
+  loop: (f, g) => loop(t, f, g)
 };
