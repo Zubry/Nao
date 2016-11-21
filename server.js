@@ -20,7 +20,7 @@ app.get('/bootstrap.css', function(req, res) {
 });
 
 app.get('/read_bci/', function(req, res) {
-  exec('sudo python insight/read.py 5', (error, stdout, stderr) => res.send(stdout))
+  exec('sudo python insight/read.py 5 | tee -a output', (error, stdout, stderr) => res.send(stdout))
 });
 
 app.listen(port);
